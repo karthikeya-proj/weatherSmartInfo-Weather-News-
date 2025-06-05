@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather & News Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>SmartInfo: Weather & News Aggregator</h1>
+
+    <button id="darkModeToggle" class="toggle-btn" aria-label="Toggle dark mode">Toggle Dark Mode</button>
+
+    <section>
+      <h2>Get Weather</h2>
+      <input type="text" id="cityInput" placeholder="Enter city (e.g. Hyderabad)" aria-label="City input" />
+      <button id="getWeatherBtn">Get Weather</button>
+      <div id="weatherResult" class="result" role="region" aria-live="polite"></div>
+    </section>
+
+    <section>
+      <h2>Get News Headlines</h2>
+      <input type="text" id="countryInput" placeholder="Enter country code (e.g. us)" aria-label="Country code input" />
+      <button id="getNewsBtn">Get News</button>
+      <div id="newsResult" class="result" role="region" aria-live="polite"></div>
+    </section>
+  </div>
+
+  <!-- Loading spinner -->
+  <div id="loadingSpinner" class="loading-spinner" aria-hidden="true" style="display:none;"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
