@@ -1,39 +1,113 @@
-# WeatherSmartInfo — Weather & News Web App
+# WeatherSmartInfo — Weather & News Web Application
 
 ##  Project Overview
 
-**WeatherSmartInfo** is a application that provides real-time weather updates and latest news headlines. It fetches weather data from **OpenWeatherMap API** and news data from **MediaStack News API**, offering a sleek and responsive user experience.
+**WeatherSmartInfo** is a Web Application (Frontend,Backend,External APIs,API Testing) that provides real-time weather updates and latest news headlines. It fetches weather data from **OpenWeatherMap API** and news data from **MediaStack News API**, offering a sleek and responsive user experience.
 
 ---
-
+#
 ## 🛠️ Technologies & Tools Used
 
-### Backend
-- **Python 3.10+**
-- **FastAPI** — lightweight web framework for building APIs
-- **Requests** — HTTP library to call external APIs
-- **APIs Used:**
-  - OpenWeatherMap API (for weather data)
-  - MediaStack News API (for news headlines)
-- **Environment Variables:** API keys securely stored in `.env`
 
-### Frontend
-- **HTML5, CSS3** — structure and styling
-- **Vanilla JavaScript (ES6+)** — client-side logic & API calls
-- **Responsive design** with CSS media queries
 
-### Tools
-- **VSCode** — code editor
-- **Git & GitHub** — version control and remote repo hosting
-- **Postman** — API testing and debugging
-- **Git Bash / Terminal** — Git commands execution
+| Name           | Image                                   | One-line Description                                      |
+|----------------|------------------------------------------|-----------------------------------------------------------|
+| **Python**     | ![Python](https://img.icons8.com/color/48/python.png) | Backend programming language using FastAPI                |
+| **FastAPI**    |  ⚡ | Lightweight Python web framework for building APIs       |
+| **JavaScript** | ![JavaScript](https://img.icons8.com/color/48/javascript.png) | Frontend scripting to handle API calls and DOM updates   |
+| **HTML**       | ![HTML](https://img.icons8.com/color/48/html-5.png) | Structure of the frontend interface                       |
+| **CSS**        | ![CSS](https://img.icons8.com/color/48/css3.png) | Styling the frontend with modern, responsive design       |
+| **Postman**    |  📮  | Used for testing and verifying backend API endpoints      |
+| **GitHub**     | ![GitHub](https://img.icons8.com/ios-filled/50/github.png) | Repository for version control and project hosting        |   |
+| **OpenWeather API** | 🌦️ | API used to fetch real-time weather information           |
+| **Mediastack API**  | 📰 | API used to retrieve latest news headlines by country      |
+
+
+---
+#
+## 🧰 APIs Used
+
+| API               | Purpose        | Documentation                                |
+|-------------------|----------------|----------------------------------------------|
+| OpenWeatherMap    | Weather data   | https://openweathermap.org/api                |
+| MediaStack News   | News headlines | https://mediastack.com/documentation          |
+
+---
+
+#
+
+# 📬 API Testing with Postman
+
+Postman was used to test and verify the backend endpoints before connecting them to the frontend. This ensured that all API responses were structured correctly and handled errors properly.
 
 ---
 
 
+###   Authorization or Headers
+
+- No authentication required (open public APIs).
+- Ensure your `.env` file contains the actual API keys for weather and news during local testing.
+
 ---
 
-## ⚙️ Setup & Installation
+### Why Postman Was Used
+
+- To test backend API endpoints without using the frontend.
+- To check error handling (e.g., invalid city or country inputs).
+- To preview raw JSON responses and fix logic before integrating with the frontend.
+
+## How Postman Was Used
+
+### ✅ 1. Test the Weather API
+
+- **Method:** GET  
+- **URL:**  http://127.0.0.1:8000/weather?city=Hyderabad
+
+
+ **Steps:**
+
+ 1. Open Postman.  
+2. Select **GET** method.  
+3. Enter the URL with the city query parameter.  
+4. Click **Send**.
+
+**Expected JSON response:**
+{
+"city": "Hyderabad",
+"temperature": 32.5,
+"description": "clear sky",
+"humidity": 54,
+"wind_speed": 3.2
+}
+
+
+---
+
+### ✅ 2. Test the News API
+
+- **Method:** GET  
+- **URL:**  http://127.0.0.1:8000/news?country=in
+
+**Steps:**
+
+1. Open Postman.  
+2. Select **GET** method.  
+3. Enter the URL with country code parameter.  
+4. Click **Send**.
+
+**Expected JSON response:**
+{
+"top_headlines": [
+"India launches new space mission...",
+"Economy shows signs of recovery...",
+...
+]
+}
+
+#
+
+
+## </>Setup & Installation
 
 1. **Clone the repository**
 
@@ -64,11 +138,11 @@
 - uvicorn app.main:app --reload
 
 
-6. **Open frontend/index.html in browser **
+6. **Open frontend/index.html in browser**
 
 ---
 
-## 💻 Usage
+## Usage
 
 - Enter a city name to get current weather (temperature, humidity, wind speed, description).
 - Enter a country code (e.g., `us`, `in`) to get top 10 latest news headlines.
@@ -92,20 +166,7 @@
 
 ---
 
-## 🧰 APIs Used
 
-| API               | Purpose        | Documentation                                |
-|-------------------|----------------|----------------------------------------------|
-| OpenWeatherMap    | Weather data   | https://openweathermap.org/api                |
-| MediaStack News   | News headlines | https://mediastack.com/documentation          |
-
----
-
-
-## 📸 Project Screenshots
-
-![Weather UI](assets/image1.png)
-![News UI](assets/image2.png)
 
 
 
