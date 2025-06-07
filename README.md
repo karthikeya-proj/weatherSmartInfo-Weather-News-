@@ -4,6 +4,8 @@
 
 **WeatherSmartInfo** is a Web Application (Frontend,Backend,External APIs,API Testing) that provides real-time weather updates and latest news headlines. It fetches weather data from **OpenWeatherMap API** and news data from **MediaStack News API**, offering a sleek and responsive user experience.
 
+**Live demo** - (https://smartweatherinfo-karthikeya-proj.netlify.app/)
+
 ---
 #
 ## 🛠️ Technologies & Tools Used
@@ -18,10 +20,11 @@
 | **HTML**       | ![HTML](https://img.icons8.com/color/48/html-5.png) | Structure of the frontend interface                       |
 | **CSS**        | ![CSS](https://img.icons8.com/color/48/css3.png) | Styling the frontend with modern, responsive design       |
 | **Postman**    |  📮  | Used for testing and verifying backend API endpoints      |
-| **GitHub**     | ![GitHub](https://img.icons8.com/ios-filled/50/github.png) | Repository for version control and project hosting        |   |
+| **GitHub**     | ![GitHub](https://img.icons8.com/ios-filled/50/github.png) | Repository for version control and project hosting        |
 | **OpenWeather API** | 🌦️ | API used to fetch real-time weather information           |
 | **Mediastack API**  | 📰 | API used to retrieve latest news headlines by country      |
-
+| **Render** | Render | Backend deployment and hosting platform                    |
+| **Netlify** | Netlify | Frontend deployment and hosting platform                   |
 
 ---
 #
@@ -166,10 +169,9 @@ Postman was used to test and verify the backend endpoints before connecting them
 
 ---
 
+## Deployment URLs
 
-
-
-
-
-
-
+| Purpose                   | URL                                                         |
+|---------------------------|-------------------------------------------------------------|
+| Frontend Deployment (Netlify) | https://smartweatherinfo-karthikeya-proj.netlify.app/     |
+| Backend Deployment (Render)    | https://weathersmartinfo.onrender.com                      |
